@@ -1,3 +1,26 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  text-align: center;
+  padding: 0.6rem 0 0.3rem 0;
+  background: linear-gradient(90deg, #1b2340 0%, #141b2e 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #8ecdf0;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.site-header .subtitle {
+  margin-top: 0.35rem;
+  font-size: 1rem;
+  color: #a7b6cc;
+}
 .main-layout {
   display: flex;
   flex-direction: column;
@@ -41,8 +64,8 @@
   z-index: 100;
   text-align: center;
   padding: 0.3rem 0;
-  background: linear-gradient(90deg, #232a3a 60%, #1a2233 100%);
-  color: #b3c2d6;
+  background: linear-gradient(90deg, #1b2340 0%, #141b2e 100%);
+  color: #a7b6cc;
   font-size: 1rem;
 }
 .footer-content {
@@ -51,8 +74,8 @@
 }
 .scroll-content {
   flex: 1;
-  margin-top: 48px;
-  margin-bottom: 32px;
+  margin-top: 72px;
+  margin-bottom: 56px;
   overflow-y: auto;
 }
 :root{--bg:#0b1020;--panel:#121832;--text:#e9edf7;--muted:#9aa4c7;--accent:#6aa6ff;--accent2:#86efac}

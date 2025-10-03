@@ -2,6 +2,8 @@ import React, { useMemo, useState } from 'react'
 import { useApi } from './services/api'
 import { VideoInput } from './components/VideoInput'
 import { SearchBar } from './components/SearchBar'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
 import { Player } from './components/Player'
 import { History } from './components/History'
 
@@ -92,13 +94,10 @@ export default function App() {
   }
 
   return (
-    <div className="container vstack" style={{ gap: 16 }}>
-      <div style={{ textAlign: 'center', marginBottom: '18px', marginTop: '8px' }}>
-        <h1 style={{ margin: 0, fontSize: '2.3rem', color: '#6ec1e4', fontWeight: 700, letterSpacing: '1px' }}>Lecture Navigator</h1>
-        <p style={{ marginTop: '0.5rem', fontSize: '1.1rem', color: '#b3c2d6', fontWeight: 500 }}>
-          Ingest subtitles, search, and jump to timestamps
-        </p>
-      </div>
+    <div className="main-layout">
+      <Header />
+      <main className="scroll-content">
+      <div className="container vstack" style={{ gap: 16 }}>
       <div className="panel vstack">
         <div className="hstack">
           <VideoInput onIngest={handleIngest} onUpload={handleUpload} loading={loadingIngest} />
@@ -145,6 +144,9 @@ export default function App() {
           )}
         </div>
       </div>
+      </div>
+      </main>
+      <Footer />
     </div>
   )
 }
